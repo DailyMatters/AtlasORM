@@ -1,0 +1,8 @@
+{
+    "require": {
+         "atlas/orm": "@dev"
+    },
+    "require-dev": {
+	"atlas/cli": "@dev"
+    }
+}
