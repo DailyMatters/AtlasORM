@@ -1,8 +1,9 @@
 <?php
+
 namespace App\DataSource\Products;
 
-use App\DataSource\Tag\CategoryMapper;
 use Atlas\Orm\Mapper\AbstractMapper;
+use App\DataSource\Tag\CategoryMapper;
 
 /**
  * @inheritdoc

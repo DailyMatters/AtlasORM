@@ -4,5 +4,11 @@
     },
     "require-dev": {
 	"atlas/cli": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\DataSource\\Products\\": "src/",
+            "App\\DataSource\\Category\\": "src/"
+        }
     }
 }
