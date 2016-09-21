@@ -12,10 +12,22 @@ $atlasContainer->setMappers([ProductsMapper::CLASS, CategoryMapper::CLASS]);
 
 $atlas = $atlasContainer->getAtlas();
 
-$categoryRecord = $atlas->fetchRecord(CategoryMapper::CLASS, '1', [
-    'products' => function ($select) {
-        $select->with(['products']);
+/*$categoryRecord = $atlas->fetchRecord(CategoryMapper::CLASS, '1', [
+    'category_id' => function ($select) {
+        $select->with(['category_id']);
     }
-]);
+]);*/
 
-var_dump( $categoryRecord );
+//$categoryRecord = $atlas->fetchRecord(CategoryMapper::CLASS, '2');
+
+$categoryRecordSet = $atlas
+    ->select(CategoryMapper::CLASS)
+    ->orderBy(['category_id DESC'])
+    ->limit(10)
+    ->cols([
+        'category_id',
+        'name'
+    ])
+->fetchRecordSet();
+
+var_dump( $categoryRecordSet[0] );

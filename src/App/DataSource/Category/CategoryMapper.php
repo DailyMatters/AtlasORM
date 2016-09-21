@@ -3,7 +3,7 @@
 namespace App\DataSource\Category;
 
 use Atlas\Orm\Mapper\AbstractMapper;
-use App\DataSource\Tag\ProductsMapper;
+use App\DataSource\Products\ProductsMapper;
 
 /**
  * @inheritdoc
